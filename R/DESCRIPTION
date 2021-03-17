@@ -1,0 +1,15 @@
+Package: example
+Title: An example package for testing
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Elliott",
+           family = "Sales de Andrade",
+           role = c("aut", "cre"),
+           email = "quantum.analyst@gmail.com")
+Description: This package is an example for testing.
+License: MIT + file LICENSE
+Suggests: testthat
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

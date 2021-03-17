@@ -21,8 +21,10 @@ jobs:
 
       - name: Install testing dependencies
         run: |
-          pip install pytest
-          # Tweak a config file.
+          pip install pytest pytest-cov
 
       - name: Run tests
-        run: pytest --verbose -ra
+        run: pytest --verbose -ra --cov
+
+      - name: Upload code coverage
+        uses: codecov/codecov-action@v1

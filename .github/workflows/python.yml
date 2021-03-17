@@ -1,0 +1,28 @@
+name: Python tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    name: "Run Python tests"
+    runs-on: ubuntu-latest
+
+    steps:
+      # Clone our code base.
+      - uses: actions/checkout@v2
+
+      # Prepare Python >= 3
+      - uses: actions/setup-python@v2
+        name: Set up Python 3
+        with:
+          python-version: 3.8
+
+      - name: Install testing dependencies
+        run: |
+          pip install pytest
+          # Tweak a config file.
+
+      - name: Run tests
+        run: pytest --verbose -ra
